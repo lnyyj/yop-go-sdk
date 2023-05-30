@@ -6,8 +6,8 @@
 package response
 
 import (
-	"github.com/yop-platform/yop-go-sdk/yop/auth"
-	"github.com/yop-platform/yop-go-sdk/yop/request"
+	"github.com/lnyyj/yop-go-sdk/yop/auth"
+	"github.com/lnyyj/yop-go-sdk/yop/request"
 	"time"
 )
 

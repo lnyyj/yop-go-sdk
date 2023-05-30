@@ -6,12 +6,13 @@
 package client
 
 import (
-	"github.com/yop-platform/yop-go-sdk/yop/constants"
-	"github.com/yop-platform/yop-go-sdk/yop/request"
-	"github.com/yop-platform/yop-go-sdk/yop/response"
-	"github.com/yop-platform/yop-go-sdk/yop/utils"
 	"os"
 	"testing"
+
+	"github.com/lnyyj/yop-go-sdk/yop/constants"
+	"github.com/lnyyj/yop-go-sdk/yop/request"
+	"github.com/lnyyj/yop-go-sdk/yop/response"
+	"github.com/lnyyj/yop-go-sdk/yop/utils"
 )
 
 func TestYopClient_GET_Request(t *testing.T) {

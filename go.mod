@@ -1,6 +1,6 @@
-module github.com/yop-platform/yop-go-sdk
+module github.com/lnyyj/yop-go-sdk
 
-go 1.18
+go 1.19
 
 require github.com/satori/go.uuid v1.2.0
 

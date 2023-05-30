@@ -8,7 +8,7 @@ package response
 import (
 	"encoding/json"
 	"errors"
-	"github.com/yop-platform/yop-go-sdk/yop/constants"
+	"github.com/lnyyj/yop-go-sdk/yop/constants"
 	"log"
 	"net/http"
 	"strconv"

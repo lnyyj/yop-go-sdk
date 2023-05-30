@@ -7,10 +7,10 @@ Yeepay openapi SDK fo Go
 ## 使用
 1.引入
 ```go
-"github.com/yop-platform/yop-go-sdk/yop/client"
-"github.com/yop-platform/yop-go-sdk/yop/constants"
-"github.com/yop-platform/yop-go-sdk/yop/request"
-"github.com/yop-platform/yop-go-sdk/yop/utils"
+"github.com/lnyyj/yop-go-sdk/yop/client"
+"github.com/lnyyj/yop-go-sdk/yop/constants"
+"github.com/lnyyj/yop-go-sdk/yop/request"
+"github.com/lnyyj/yop-go-sdk/yop/utils"
 ```
 2.调用接口</br>
 Get请求

@@ -8,12 +8,6 @@ package client
 import (
 	"bytes"
 	"errors"
-	uuid "github.com/satori/go.uuid"
-	"github.com/yop-platform/yop-go-sdk/yop/auth"
-	"github.com/yop-platform/yop-go-sdk/yop/constants"
-	"github.com/yop-platform/yop-go-sdk/yop/request"
-	"github.com/yop-platform/yop-go-sdk/yop/response"
-	"github.com/yop-platform/yop-go-sdk/yop/utils"
 	"io"
 	"io/ioutil"
 	"log"
@@ -22,6 +16,13 @@ import (
 	"net/url"
 	"runtime"
 	"strings"
+
+	"github.com/lnyyj/yop-go-sdk/yop/auth"
+	"github.com/lnyyj/yop-go-sdk/yop/constants"
+	"github.com/lnyyj/yop-go-sdk/yop/request"
+	"github.com/lnyyj/yop-go-sdk/yop/response"
+	"github.com/lnyyj/yop-go-sdk/yop/utils"
+	uuid "github.com/satori/go.uuid"
 )
 
 var DefaultClient = YopClient{&http.Client{Transport: http.DefaultTransport}}
@@ -41,6 +42,7 @@ func (yopClient *YopClient) Request(request *request.YopRequest) (*response.YopR
 		return nil, err
 	}
 	httpResp, _ := yopClient.Client.Do(&httpRequest)
+	defer httpResp.Body.Close()
 
 	body, _ := ioutil.ReadAll(httpResp.Body)
 	var yopResponse = response.YopResponse{Content: body}
